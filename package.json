@@ -1,0 +1,45 @@
+{
+  "name": "terra-theme",
+  "displayName": "Terra Theme (Alpha)",
+  "publisher": "NikolausBrunner",
+  "description": "",
+  "version": "0.1.1",
+  "engines": {
+    "vscode": "^1.68.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/terra-theme/vscode"
+  },
+  "maintainers": [
+    "Nikolaus Brunner <nikolaus.brunner@protonmail.ch>"
+  ],
+  "categories": [
+    "Themes"
+  ],
+  "scripts": {
+    "publish": "vsce publish",
+    "build": "ts-node src/index.ts",
+    "dev": "nodemon"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Terra - Spring [Night]",
+        "uiTheme": "vs-dark",
+        "path": "./themes/terra-spring-night.json"
+      },
+      {
+        "label": "Terra - Spring [Day]",
+        "uiTheme": "vs",
+        "path": "./themes/terra-spring-day.json"
+      }
+    ]
+  },
+  "dependencies": {
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4",
+    "vsce": "^2.10.0"
+  }
+}
