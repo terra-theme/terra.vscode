@@ -1,45 +1,60 @@
 {
-  "name": "terra-theme",
-  "displayName": "Terra Theme (Alpha)",
-  "publisher": "NikolausBrunner",
-  "description": "",
-  "version": "0.1.1",
-  "engines": {
-    "vscode": "^1.68.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/terra-theme/vscode"
-  },
-  "maintainers": [
-    "Nikolaus Brunner <nikolaus.brunner@protonmail.ch>"
-  ],
-  "categories": [
-    "Themes"
-  ],
-  "scripts": {
-    "publish": "vsce publish",
-    "build": "ts-node src/index.ts",
-    "dev": "nodemon"
-  },
-  "contributes": {
-    "themes": [
-      {
-        "label": "Terra - Spring [Night]",
-        "uiTheme": "vs-dark",
-        "path": "./themes/terra-spring-night.json"
-      },
-      {
-        "label": "Terra - Spring [Day]",
-        "uiTheme": "vs",
-        "path": "./themes/terra-spring-day.json"
-      }
-    ]
-  },
-  "dependencies": {
-    "nodemon": "^2.0.19",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.7.4",
-    "vsce": "^2.10.0"
-  }
+    "name": "terra-theme",
+    "displayName": "Terra Theme",
+    "publisher": "TerraTheme",
+    "description": "Terra is a Colorscheme inspired by nature and their seasons",
+    "version": "0.1.7",
+    "engines": {
+        "vscode": "^1.68.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/terra-theme/vscode"
+    },
+    "bugs": {
+        "url": "https://github.com/terra-theme/vscode/issues"
+    },
+    "icon": "icon.png",
+    "maintainers": [
+        "Nikolaus Brunner <nikolaus.brunner@protonmail.ch>"
+    ],
+    "categories": [
+        "Themes"
+    ],
+    "scripts": {
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "lint": "eslint ./src --ext .ts,.tsx",
+        "lint:fix": "npm run lint -- --fix && npm run format",
+        "publish": "vsce publish",
+        "build": "ts-node src/index.ts",
+        "test": "npm run format:check && npm run lint && tsc src/index.ts --noEmit",
+        "dev": "nodemon"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "Terra - Spring [Night]",
+                "uiTheme": "vs-dark",
+                "path": "./dist/terra-spring-night.json"
+            },
+            {
+                "label": "Terra - Spring [Day]",
+                "uiTheme": "vs",
+                "path": "./dist/terra-spring-day.json"
+            }
+        ]
+    },
+    "dependencies": {
+        "vsce": "^2.10.0"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.40.0",
+        "@typescript-eslint/parser": "^5.40.0",
+        "typescript": "^4.7.4",
+        "ts-node": "^10.9.1",
+        "eslint": "^8.25.0",
+        "prettier": "^2.7.1",
+        "nodemon": "^2.0.19"
+    }
 }
