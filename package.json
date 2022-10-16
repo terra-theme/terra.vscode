@@ -1,7 +1,7 @@
 {
-    "name": "terra-theme",
-    "displayName": "Terra Theme",
-    "publisher": "TerraTheme",
+    "name": "terra-theme-vsc",
+    "displayName": "Terra Theme for VSCode",
+    "publisher": "terra-theme",
     "description": "Terra is a Colorscheme inspired by nature and their seasons",
     "version": "0.1.7",
     "engines": {
@@ -45,16 +45,14 @@
             }
         ]
     },
-    "dependencies": {
-        "vsce": "^2.10.0"
-    },
     "devDependencies": {
+        "vsce": "^2.10.0",
+        "nodemon": "^2.0.19",
         "@typescript-eslint/eslint-plugin": "^5.40.0",
         "@typescript-eslint/parser": "^5.40.0",
         "typescript": "^4.7.4",
         "ts-node": "^10.9.1",
         "eslint": "^8.25.0",
-        "prettier": "^2.7.1",
-        "nodemon": "^2.0.19"
+        "prettier": "^2.7.1"
     }
 }
