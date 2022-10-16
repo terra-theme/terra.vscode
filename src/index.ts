@@ -1,20 +1,21 @@
-import fs from "fs";
-import springNight from "./spring/night";
-import springDay from "./spring/day";
-import { TerraTheme } from "./types/Terra";
+import * as fs from "fs";
 
-const themes: TerraTheme[] = [springNight, springDay];
+import springNight from "./themes/spring/night";
+import springDay from "./themes/spring/day";
+import { Theme } from "./types/theme";
 
-themes.forEach((theme) => {
-  const themeAsJson = JSON.stringify(theme, undefined, 2);
+const themes: Theme[] = [springNight, springDay];
 
-  fs.writeFile(
-    `./themes/terra-${theme.season}-${theme.time}.json`,
-    themeAsJson,
-    (err) => {
-      if (err) throw err;
-    }
-  );
+themes.forEach(theme => {
+    const themeAsJson = JSON.stringify(theme, undefined, 4);
 
-  console.log(`Updated [${theme.name}]`);
+    fs.writeFile(
+        `./dist/terra-${theme.season}-${theme.time}.json`,
+        themeAsJson,
+        err => {
+            if (err) throw err;
+        }
+    );
+
+    console.log(`Updated [${theme.name}]`);
 });
