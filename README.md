@@ -9,4 +9,3 @@ I am starting with the **Spring Theme** to gather experience and building up the
 The **Terra Spring** Theme is should be usable for daily use, while I am working on Summer, Fall and Winter.
 
 When I am finished with the VSCode variant for the theme, I will continue to work on [Neovim](https://github.com/terra-theme/nvim), Obsidian and [Terminal](https://github.com/terra-theme/terminal) variants.
-

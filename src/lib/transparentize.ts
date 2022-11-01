@@ -1,4 +1,4 @@
-import { HexColor } from "../types/colors";
+import { HexColor } from "../typings/colors";
 
 /**
  * A function to transparentize a hex color

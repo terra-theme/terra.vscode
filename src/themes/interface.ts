@@ -1,15 +1,7 @@
-import { TerraSemanticColors } from "../types/colors";
-import VscInterfaceColors from "../types/interface";
-
+import { TerraSemanticColors } from "../typings/colors";
+import { VscInterfaceColors } from "../typings/interface";
 import { transparentize } from "../lib/transparentize";
 
-/**
- * Returns colors for the interface.
- * With a second optional parameter, overrides can be set.
- * @param semantics TerraSemantics
- * @param overrides VscInterfaceColors
- * @returns VscInterfaceColors
- */
 export const buildInterfaceColors = (
     semantics: TerraSemanticColors,
     overrides?: VscInterfaceColors
@@ -40,7 +32,7 @@ export const buildInterfaceColors = (
         "sideBar.background": bg.dark,
         "sideBar.border": border.dark,
         "sideBar.dropBackground": bg.light,
-        "sideBar.foreground": fg.dark,
+        "sideBar.foreground": fg.main,
         "sideBarSectionHeader.background": bg.main,
         "sideBarSectionHeader.border": border.main,
         "sideBarSectionHeader.foreground": fg.main,

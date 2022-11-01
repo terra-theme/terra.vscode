@@ -1,49 +1,51 @@
-import {
-    TokenScope,
-    TokenFontStyle,
-    TokenForeground,
-    TokenSettings,
-    TokenColor,
-    TokenMap,
-    FullTokenMap
-} from "../types/token";
+import * as fs from "fs";
 
-export const buildTokenSettings = (
-    foreground?: TokenForeground,
-    fontStyle?: TokenFontStyle
-): TokenSettings => ({
-    ...(foreground && { foreground }),
-    ...(fontStyle && { fontStyle })
-});
+import { TokenScope } from "../typings/scopes";
+import { Theme } from "../typings/theme";
+import { TokenColor, TokenMap } from "../typings/token";
 
-export const buildToken = (
-    scope: TokenScope,
-    settings: TokenSettings
-): TokenColor => ({
-    scope,
-    settings
-});
+export const buildTokenColors = (
+    fullTokenMap: TokenMap<TokenScope>
+): TokenColor[] => {
+    return Object.entries(fullTokenMap).map(([scope, settings]) => ({
+        scope: scope as TokenScope,
+        settings
+    }));
+};
 
-/** buildTokenColors
- * @description
- * Build TokenColors from FullTokenMap
- **/
-export const buildTokenColors = (fullTokenMap: FullTokenMap): TokenColor[] => {
-    // Omit and ignore the language keys (e.g. `css`) from the fullTokenMap by grabbing only the values from it
-    const allTokenMapsWithoutLangKeys: TokenMap[] = Object.values(fullTokenMap);
+export const buildThemes = (themes: Theme[]): void => {
+    const PROJECT_DIR_PATH = process.env.PWD;
+    const DISTRIBUTION_DIR_NAME = "dist";
+    const DISTRIBUTION_DIR_PATH = `${PROJECT_DIR_PATH}/${DISTRIBUTION_DIR_NAME}`;
 
-    // Traverse through all language tokenMaps and build token-styles from it
-    const allTokenColors = allTokenMapsWithoutLangKeys.reduce(
-        (acc: TokenColor[], tokenMap: TokenMap) => {
-            return [
-                ...acc,
-                ...Object.entries(tokenMap).map(([tokenScope, tokenSetting]) => {
-                    return buildToken(tokenScope, tokenSetting);
-                })
-            ];
-        },
-        []
-    );
+    const ensureDirectory = (dirPath: string): void => {
+        if (!fs.existsSync(dirPath)) {
+            fs.mkdirSync(dirPath);
 
-    return allTokenColors;
+            console.log(
+                "✅".padEnd(2, " "),
+                "Created distribution folder..".padEnd(40, " "),
+                `📂 "/${dirPath}"`
+            );
+        }
+    };
+
+    const writeThemeFile = (theme: Theme): void => {
+        const themeAsJson = JSON.stringify(theme, undefined, 4);
+        const THEME_FILE_PATH = `${DISTRIBUTION_DIR_PATH}/terra-${theme.season}-${theme.time}.json`;
+
+        ensureDirectory(DISTRIBUTION_DIR_PATH);
+
+        fs.writeFile(THEME_FILE_PATH, themeAsJson, err => {
+            if (err) throw err;
+        });
+
+        console.log(
+            "✅".padEnd(2, " "),
+            `Updated [${theme.name}]..`.padEnd(40, " "),
+            `📁 "${THEME_FILE_PATH}"`
+        );
+    };
+
+    themes.forEach(writeThemeFile);
 };

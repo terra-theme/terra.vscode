@@ -1,17 +1,16 @@
 import { buildTokenColors } from "../../../lib/build";
-import { Theme } from "../../../types/theme";
+import { Theme } from "../../../typings/theme";
 import { buildInterfaceColors } from "../../interface";
-import colors from "./colors";
-import fullTokenMap from "./token";
 
-// TODO: export default buildTheme({ ...meta }, colors, tokenColors)
+import { fullTokenMap } from "./token";
+import { semantics } from "./colors";
+
 const theme: Theme = {
-    name: "Terra Spring Night",
+    name: "terra spring night",
     type: "dark",
-    time: "Night",
-    season: "Spring",
-
-    colors: buildInterfaceColors(colors.semantics),
+    time: "night",
+    season: "spring",
+    colors: buildInterfaceColors(semantics),
     tokenColors: buildTokenColors(fullTokenMap)
 };
 

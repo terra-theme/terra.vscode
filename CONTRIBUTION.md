@@ -1,17 +1,17 @@
 ## References
 
-- [Visual Studio Code - Syntax Highlight Guide](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide)
-- [Visual Studio Code - Color Theme Guide](https://code.visualstudio.com/api/extension-guides/color-theme#syntax-colors)
-- [Visual Studio Code - Theme Color Reference](https://code.visualstudio.com/api/references/theme-color)
-- [Visual Studio Code - Color Themes](https://code.visualstudio.com/docs/getstarted/themes)
-- [TextMate](https://macromates.com/manual/en/)
-- [Intro to TextMate](https://www.apeth.com/nonblog/stories/textmatebundle.html)
-- [Creating a VS Code Theme](https://css-tricks.com/creating-a-vs-code-theme/)
+-   [Visual Studio Code - Syntax Highlight Guide](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide)
+-   [Visual Studio Code - Color Theme Guide](https://code.visualstudio.com/api/extension-guides/color-theme#syntax-colors)
+-   [Visual Studio Code - Theme Color Reference](https://code.visualstudio.com/api/references/theme-color)
+-   [Visual Studio Code - Color Themes](https://code.visualstudio.com/docs/getstarted/themes)
+-   [TextMate](https://macromates.com/manual/en/)
+-   [Intro to TextMate](https://www.apeth.com/nonblog/stories/textmatebundle.html)
+-   [Creating a VS Code Theme](https://css-tricks.com/creating-a-vs-code-theme/)
 
 There are two components to syntax highlighting:
 
-- Breaking text into a list of tokens and scopes using a grammar
-- Using a theme to map these scopes to specific colors and styles
+-   Breaking text into a list of tokens and scopes using a grammar
+-   Using a theme to map these scopes to specific colors and styles
 
 ### TextMate Grammars
 
@@ -29,10 +29,10 @@ TextMate provides a [list of common scopes](https://macromates.com/manual/en/lan
 
 Scopes nest so that each token is associated with a list of parent scopes. In a simple JavaScript function, the `+` operator has the following scope hierarchy (from lowest child to highest parent):
 
-- keyword.operator.arithmetic.js
-- meta.array.literal.js
-- meta.block.js
-- meta.function.js
-- source.js
+-   keyword.operator.arithmetic.js
+-   meta.array.literal.js
+-   meta.block.js
+-   meta.function.js
+-   source.js
 
 Parent scope information is used for theming. When a theme targets a scope, all tokens with that parent scope will be colorized unless the theme also provides a more specific colorization for their individual scopes.

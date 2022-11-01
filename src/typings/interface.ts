@@ -1,6 +1,6 @@
 import { HexColor } from "./colors";
 
-interface VscInterfaceColors {
+export interface VscInterfaceColors {
     /** CONTRAST COLORS
      *  The contrast colors are typically only set for high contrast themes. If set, they add an additional border around items across the UI to increase the contrast.
      *  @see https://code.visualstudio.com/api/references/theme-color#contrast-colors
@@ -4663,5 +4663,3 @@ interface VscInterfaceColors {
      **/
     "ports.iconRunningProcessForeground"?: HexColor;
 }
-
-export default VscInterfaceColors;
