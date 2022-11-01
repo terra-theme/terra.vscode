@@ -22,6 +22,7 @@
         "ecmaVersion": "latest"
     },
     "plugins": ["@typescript-eslint"],
+    "ignorePatterns": ["demo"],
     "rules": {
         "indent": ["error", 4],
         "linebreak-style": ["error", "unix"],

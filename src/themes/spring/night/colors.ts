@@ -4,9 +4,9 @@ import {
     TerraPaletteColors,
     TerraPrimaryColors,
     TerraSemanticColors
-} from "../../../types/colors";
+} from "../../../typings/colors";
 
-const primaries: TerraPrimaryColors = {
+export const primaries: TerraPrimaryColors = {
     0: "#141F19",
     1: "#17251E",
     2: "#1B2C24",
@@ -18,10 +18,10 @@ const primaries: TerraPrimaryColors = {
     8: "#A1C4B2",
     9: "#B8D3C6",
     10: "#D0E2D9",
-    11: "#eff0e7"
+    11: "#EFF0E7"
 };
 
-const palette: TerraPaletteColors = {
+export const palette: TerraPaletteColors = {
     black: primaries[0],
     gray: primaries[4],
 
@@ -49,7 +49,7 @@ const palette: TerraPaletteColors = {
     transparent: "#ffffff00"
 };
 
-const semantics: TerraSemanticColors = {
+export const semantics: TerraSemanticColors = {
     debug: palette.darkRed,
 
     shadow: transparentize(primaries[2], 0.3),
@@ -123,10 +123,8 @@ const semantics: TerraSemanticColors = {
     }
 };
 
-const colors: TerraColors = {
+export const colors: TerraColors = {
     primaries,
     palette,
     semantics
 };
-
-export default colors;
