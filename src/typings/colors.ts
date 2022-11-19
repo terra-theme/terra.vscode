@@ -74,6 +74,7 @@ export interface TerraSemanticColors {
         light: HexColor;
         active: HexColor;
         transparent: HexColor;
+        selection: HexColor;
     };
 
     vcs: {
