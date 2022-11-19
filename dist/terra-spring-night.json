@@ -17,7 +17,7 @@
         "activityBar.foreground": "#F2C14E",
         "activityBar.inactiveForeground": "#4E7E66",
         "activityBarBadge.background": "#F2C14E",
-        "activityBarBadge.foreground": "#141F19",
+        "activityBarBadge.foreground": "#284336",
         "sideBar.background": "#141F19",
         "sideBar.border": "#1B2C24",
         "sideBar.dropBackground": "#1B2C24",
@@ -34,7 +34,7 @@
         "list.focusBackground": "#17251E",
         "list.focusForeground": "#F2C14E",
         "list.highlightForeground": "#F2C14E",
-        "list.hoverBackground": "#1B2C24",
+        "list.hoverBackground": "#17251E",
         "list.hoverForeground": "#F2C14E",
         "listFilterWidget.background": "#1B2C24",
         "listFilterWidget.noMatchesOutline": "#4E7E66",
@@ -42,14 +42,14 @@
         "tree.indentGuidesStroke": "#284336",
         "statusBar.background": "#141F19",
         "statusBar.debuggingBackground": "#F2C14E",
-        "statusBar.debuggingForeground": "#141F19",
+        "statusBar.debuggingForeground": "#284336",
         "statusBar.foreground": "#4E7E66",
         "statusBar.noFolderBackground": "#1B2C24",
-        "statusBar.noFolderForeground": "#141F19",
+        "statusBar.noFolderForeground": "#284336",
         "statusBarItem.activeBackground": "#F2C14E",
         "statusBarItem.hoverBackground": "#1B2C24",
         "statusBarItem.remoteBackground": "#F2C14E",
-        "statusBarItem.remoteForeground": "#141F19",
+        "statusBarItem.remoteForeground": "#284336",
         "titleBar.activeBackground": "#141F19",
         "titleBar.activeForeground": "#F2C14E",
         "titleBar.inactiveBackground": "#141F19",
@@ -187,7 +187,7 @@
         "terminal.ansiBrightRed": "#da714d",
         "terminal.ansiBrightWhite": "#EFF0E7",
         "terminal.ansiBrightYellow": "#F2C14E",
-        "terminal.ansiBlack": "#141F19",
+        "terminal.ansiBlack": "#284336",
         "terminal.ansiBlue": "#6199d1",
         "terminal.ansiCyan": "#5aaf7d",
         "terminal.ansiGreen": "#5b9257",
@@ -235,7 +235,7 @@
         "debugToolBar.background": "#141F19",
         "debugToolBar.border": "#284336",
         "peekView.border": "#1B2C24",
-        "peekViewTitle.background": "#141F19",
+        "peekViewTitle.background": "#284336",
         "peekViewTitleDescription.foreground": "#4E7E66",
         "peekViewTitleLabel.foreground": "#EFF0E7",
         "peekViewEditor.background": "#141F1980",
@@ -828,7 +828,7 @@
         {
             "scope": "source",
             "settings": {
-                "foreground": "#EFF0E7"
+                "foreground": "#B8D3C6"
             }
         },
         {
@@ -906,7 +906,7 @@
         {
             "scope": "source.shell",
             "settings": {
-                "foreground": "#EFF0E7"
+                "foreground": "#B8D3C6"
             }
         }
     ]
