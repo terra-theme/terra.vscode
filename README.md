@@ -1,11 +1,34 @@
 # Terra Theme for Visual Studio Code
 
-Terra is a multi-platform theme collection with nature inspired themes for each season, with a day and night variant.
+Terra is a multi-platform color scheme collection, inspired by nature and their seasons, with a day and night variant.
 
 ## 🚧 &nbsp;Status: Early development &nbsp;🚧</p>
 
-I am starting with the **Spring Theme** to gather experience and building up the architecture, than will work on the infrastructure to be able to work with color variables and build th theme files dynamically, to be able to create the follow themes a bit faster and smarter.
-
-The **Terra Spring** Theme is should be usable for daily use, while I am working on Summer, Fall and Winter.
+This theme is in an early development phase.
 
 When I am finished with the VSCode variant for the theme, I will continue to work on [Neovim](https://github.com/terra-theme/nvim), Obsidian and [Terminal](https://github.com/terra-theme/terminal) variants.
+
+## Themes
+
+- [x] Spring
+- [x] Summer
+- [ ] Fall
+- [ ] Winter
+
+## Screenshots
+
+### Spring Night
+
+![Spring Night](assets/spring-night_0-2-0.png)
+
+### Spring Day
+
+![Spring Day](assets/spring-day_0-2-0.png)
+
+### Summer Night
+
+![Summer Night](assets/summer-night_0-2-0.png)
+
+### Summer Day
+
+![Summer Day](assets/summer-day_0-2-0.png))
