@@ -114,7 +114,7 @@ export const defaultTokenMap: TokenMap<DefaultTokenScope> = {
     "meta.brace.round": { foreground: palette.white },
     "meta.brace.square": { foreground: palette.white },
 
-    source: { foreground: palette.white },
+    source: { foreground: palette.lightGray },
 
     invalid: { foreground: palette.gray }
 };
@@ -137,7 +137,7 @@ export const scssTokenMap: TokenMap<ScssTokenScope> = {
 };
 
 export const shellTokenMap: TokenMap<ShellTokenScope> = {
-    "source.shell": { foreground: palette.white }
+    "source.shell": { foreground: palette.lightGray }
 };
 
 export const fullTokenMap: TokenMap<TokenScope> = {

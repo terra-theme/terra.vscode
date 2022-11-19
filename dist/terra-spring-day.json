@@ -828,7 +828,7 @@
         {
             "scope": "source",
             "settings": {
-                "foreground": "#EFF0E7"
+                "foreground": "#4E7E66"
             }
         },
         {
@@ -906,7 +906,7 @@
         {
             "scope": "source.shell",
             "settings": {
-                "foreground": "#EFF0E7"
+                "foreground": "#4E7E66"
             }
         }
     ]
