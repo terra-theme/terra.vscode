@@ -34,7 +34,7 @@
         "list.focusBackground": "#17251E",
         "list.focusForeground": "#F2C14E",
         "list.highlightForeground": "#F2C14E",
-        "list.hoverBackground": "#1B2C24",
+        "list.hoverBackground": "#17251E",
         "list.hoverForeground": "#F2C14E",
         "listFilterWidget.background": "#1B2C24",
         "listFilterWidget.noMatchesOutline": "#4E7E66",

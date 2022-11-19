@@ -47,7 +47,7 @@ export const buildInterfaceColors = (
         "list.focusBackground": bg.main,
         "list.focusForeground": fg.active,
         "list.highlightForeground": fg.active,
-        "list.hoverBackground": bg.light,
+        "list.hoverBackground": bg.main,
         "list.hoverForeground": fg.active,
         "listFilterWidget.background": bg.light,
         "listFilterWidget.noMatchesOutline": border.light,
