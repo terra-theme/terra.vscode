@@ -102,10 +102,11 @@ export const buildInterfaceColors = (
         "editorLineNumber.activeForeground": fg.active,
         "editorLineNumber.foreground": fg.dark,
 
-        "editor.findMatchBackground": bg.light,
-        "editor.findMatchBorder": border.main,
+        "editor.findMatchBackground": bg.selection,
+        "editor.findMatchBorder": border.selection,
+
         "editor.findMatchHighlightBackground": bg.selection,
-        "editor.findMatchHighlightBorder": border.transparent,
+        "editor.findMatchHighlightBorder": border.main,
 
         "editor.findRangeHighlightBackground": bg.main,
         "editor.findRangeHighlightBorder": border.transparent,

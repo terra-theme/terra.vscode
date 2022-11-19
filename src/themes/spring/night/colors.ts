@@ -67,7 +67,7 @@ export const semantics: TerraSemanticColors = {
         warning: transparentize(palette.darkYellow, 0.25),
         error: palette.transparent,
 
-        selection: transparentize(palette.darkMagenta, 0.15),
+        selection: transparentize(palette.magenta, 0.15),
         hover: transparentize(palette.lightGray, 0.15)
     },
 
@@ -109,7 +109,8 @@ export const semantics: TerraSemanticColors = {
         main: primaries[3],
         light: primaries[4],
         active: palette.yellow,
-        transparent: palette.transparent
+        transparent: palette.transparent,
+        selection: transparentize(palette.yellow, 0.75)
     },
 
     vcs: {
