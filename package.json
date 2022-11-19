@@ -3,7 +3,7 @@
     "displayName": "Terra Theme for VSCode",
     "publisher": "terra-theme",
     "description": "Terra is a Colorscheme inspired by nature and their seasons",
-    "version": "0.1.10",
+    "version": "0.2",
     "engines": {
         "vscode": "^1.68.0"
     },
@@ -42,6 +42,16 @@
                 "label": "Terra - Spring [Day]",
                 "uiTheme": "vs",
                 "path": "./dist/terra-spring-day.json"
+            },
+            {
+                "label": "Terra - Summer [Night]",
+                "uiTheme": "vs-dark",
+                "path": "./dist/terra-summer-night.json"
+            },
+            {
+                "label": "Terra - Summer [Day]",
+                "uiTheme": "vs",
+                "path": "./dist/terra-summer-day.json"
             }
         ]
     },
