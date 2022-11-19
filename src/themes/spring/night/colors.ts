@@ -22,7 +22,7 @@ export const primaries: TerraPrimaryColors = {
 };
 
 export const palette: TerraPaletteColors = {
-    black: primaries[0],
+    black: primaries[3],
     gray: primaries[4],
 
     darkRed: "#d6582e",
