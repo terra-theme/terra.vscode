@@ -1,4 +1,8 @@
+import { HSL } from "colors-convert/dist/cjs/lib/types/types";
+
 export type HexColor = `#${string}`;
+
+export type BasePrimary = Pick<HSL, "h" | "s">;
 
 export interface TerraPrimaryColors {
     0: HexColor;

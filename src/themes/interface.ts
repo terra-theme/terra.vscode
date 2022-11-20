@@ -1,6 +1,6 @@
+import { transparentizeHex } from "../lib/color";
 import { TerraSemanticColors } from "../typings/colors";
 import { VscInterfaceColors } from "../typings/interface";
-import { transparentize } from "../lib/transparentize";
 
 export const buildInterfaceColors = (
     semantics: TerraSemanticColors,
@@ -209,8 +209,8 @@ export const buildInterfaceColors = (
 
         // Git & Diff
         "diffEditor.border": border.main,
-        "diffEditor.insertedTextBackground": transparentize(vcs.added, 0.1),
-        "diffEditor.removedTextBackground": transparentize(vcs.deleted, 0.1),
+        "diffEditor.insertedTextBackground": transparentizeHex(vcs.added, 0.1),
+        "diffEditor.removedTextBackground": transparentizeHex(vcs.deleted, 0.1),
 
         "gitDecoration.addedResourceForeground": vcs.added,
         "gitDecoration.conflictingResourceForeground": vcs.conflict,
@@ -224,10 +224,10 @@ export const buildInterfaceColors = (
 
         "merge.commonContentBackground": bg.dark,
         "merge.commonHeaderBackground": bg.main,
-        "merge.currentContentBackground": transparentize(vcs.current, 0.25),
-        "merge.currentHeaderBackground": transparentize(vcs.current, 1),
-        "merge.incomingContentBackground": transparentize(vcs.incoming, 0.25),
-        "merge.incomingHeaderBackground": transparentize(vcs.incoming, 1),
+        "merge.currentContentBackground": transparentizeHex(vcs.current, 0.25),
+        "merge.currentHeaderBackground": transparentizeHex(vcs.current, 1),
+        "merge.incomingContentBackground": transparentizeHex(vcs.incoming, 0.25),
+        "merge.incomingHeaderBackground": transparentizeHex(vcs.incoming, 1),
 
         // Panel
         "panel.background": bg.dark,
@@ -281,9 +281,9 @@ export const buildInterfaceColors = (
 
         // Scrollbar
         "scrollbar.shadow": shadow,
-        "scrollbarSlider.activeBackground": transparentize(bg.light, 0.5),
-        "scrollbarSlider.background": transparentize(bg.dark, 0.75),
-        "scrollbarSlider.hoverBackground": transparentize(bg.light, 0.75),
+        "scrollbarSlider.activeBackground": transparentizeHex(bg.light, 0.5),
+        "scrollbarSlider.background": transparentizeHex(bg.dark, 0.75),
+        "scrollbarSlider.hoverBackground": transparentizeHex(bg.light, 0.75),
 
         // Notifications
         "notificationCenter.border": border.main,
@@ -315,7 +315,7 @@ export const buildInterfaceColors = (
         "peekViewTitle.background": bg.neutral,
         "peekViewTitleDescription.foreground": fg.dark,
         "peekViewTitleLabel.foreground": fg.main,
-        "peekViewEditor.background": transparentize(bg.dark, 0.5),
+        "peekViewEditor.background": transparentizeHex(bg.dark, 0.5),
         "peekViewEditor.matchHighlightBackground": bg.selection,
         "peekViewEditor.matchHighlightBorder": border.transparent,
         "peekViewEditorGutter.background": bg.dark,

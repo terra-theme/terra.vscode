@@ -1,58 +1,67 @@
-import { transparentize } from "../../../lib/transparentize";
+import { buildPrimary } from "../../../lib/build";
+import { hslaToHex, transparentizeHex } from "../../../lib/color";
 import {
+    BasePrimary,
     TerraColors,
     TerraPaletteColors,
     TerraPrimaryColors,
     TerraSemanticColors
 } from "../../../typings/colors";
 
+const basePrimary: BasePrimary = {
+    h: 150,
+    s: 23
+};
+
 export const primaries: TerraPrimaryColors = {
-    0: "#141F19",
-    1: "#17251E",
-    2: "#1B2C24",
-    3: "#284336",
-    4: "#4E7E66",
-    5: "#5D9579",
-    6: "#71A78C",
-    7: "#89B69F",
-    8: "#A1C4B2",
-    9: "#B8D3C6",
-    10: "#D0E2D9",
-    11: "#EFF0E7"
+    0: buildPrimary(basePrimary, 10),
+    1: buildPrimary(basePrimary, 12),
+    2: buildPrimary(basePrimary, 14),
+    3: buildPrimary(basePrimary, 21),
+
+    4: buildPrimary(basePrimary, 40),
+    5: buildPrimary(basePrimary, 47),
+    6: buildPrimary(basePrimary, 54),
+    7: buildPrimary(basePrimary, 62),
+
+    8: buildPrimary(basePrimary, 70),
+    9: buildPrimary(basePrimary, 77),
+    10: buildPrimary(basePrimary, 85),
+    11: buildPrimary(basePrimary, 92)
 };
 
 export const palette: TerraPaletteColors = {
     black: primaries[3],
     gray: primaries[4],
 
-    darkRed: "#af4522",
-    red: "#d4592f",
+    darkRed: hslaToHex({ h: 14, s: 67, l: 40 }),
+    red: hslaToHex({ h: 14, s: 65, l: 50 }),
 
-    darkGreen: "#44913e",
-    green: "#47a940",
+    darkGreen: hslaToHex({ h: 115, s: 40, l: 40 }),
+    green: hslaToHex({ h: 115, s: 45, l: 45 }),
 
-    darkYellow: "#e07221",
-    yellow: "#e1a122",
+    darkYellow: hslaToHex({ h: 25, s: 75, l: 50 }),
+    yellow: hslaToHex({ h: 39, s: 76, l: 50 }),
 
-    darkBlue: "#2f69a2",
-    blue: "#4780ba",
+    darkBlue: hslaToHex({ h: 210, s: 55, l: 40 }),
+    blue: hslaToHex({ h: 210, s: 45, l: 50 }),
 
-    darkMagenta: "#a1619c",
-    magenta: "#a582cb",
+    darkMagenta: hslaToHex({ h: 304, s: 25, l: 50 }),
+    magenta: hslaToHex({ h: 268, s: 41, l: 65 }),
 
-    darkCyan: "#33995E",
-    cyan: "#46ba67",
+    darkCyan: hslaToHex({ h: 145, s: 49, l: 40 }),
+    cyan: hslaToHex({ h: 137, s: 45, l: 50 }),
 
     lightGray: primaries[9],
     white: primaries[11],
 
-    transparent: "#ffffff00"
+    transparent: hslaToHex({ h: 255, s: 100, l: 100 })
 };
 
 export const semantics: TerraSemanticColors = {
     debug: palette.darkRed,
 
-    shadow: transparentize(primaries[0], 0.1),
+    shadow: transparentizeHex(primaries[0], 0.1),
 
     bg: {
         dark: primaries[9],
@@ -63,12 +72,12 @@ export const semantics: TerraSemanticColors = {
         neutral: palette.black,
         transparent: palette.transparent,
 
-        info: transparentize(palette.darkBlue, 0.25),
-        warning: transparentize(palette.darkYellow, 0.25),
-        error: transparentize(palette.darkRed, 0.25),
+        info: transparentizeHex(palette.darkBlue, 0.25),
+        warning: transparentizeHex(palette.darkYellow, 0.25),
+        error: transparentizeHex(palette.darkRed, 0.25),
 
-        selection: transparentize(palette.magenta, 0.15),
-        hover: transparentize(palette.lightGray, 0.15)
+        selection: transparentizeHex(palette.magenta, 0.15),
+        hover: transparentizeHex(palette.lightGray, 0.15)
     },
 
     fg: {
@@ -110,7 +119,7 @@ export const semantics: TerraSemanticColors = {
         light: primaries[10],
         active: palette.magenta,
         transparent: palette.transparent,
-        selection: transparentize(palette.magenta, 0.75)
+        selection: transparentizeHex(palette.magenta, 0.75)
     },
 
     vcs: {

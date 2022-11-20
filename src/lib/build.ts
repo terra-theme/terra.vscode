@@ -1,8 +1,27 @@
+import { HSL } from "colors-convert/dist/cjs/lib/types/types";
 import * as fs from "fs";
+import { BasePrimary, HexColor } from "../typings/colors";
 
 import { TokenScope } from "../typings/scopes";
 import { Theme } from "../typings/theme";
 import { TokenColor, TokenMap } from "../typings/token";
+import { hslaToHex } from "./color";
+import { isFloat } from "./number";
+
+export const buildPrimary = (basePrimary: BasePrimary, l: HSL["l"]): HexColor => {
+    if (isFloat(l)) {
+        throw Error(`l: '${l}' must be an integer.`);
+    } else if (l < 0 || l > 100) {
+        throw Error(`l: '${l}' must an integer between 0 an 100, or 0 and 100.`);
+    }
+
+    return hslaToHex({
+        ...basePrimary,
+        l
+    });
+};
+
+// TODO: buildPrimaries(...?)
 
 export const buildTokenColors = (
     fullTokenMap: TokenMap<TokenScope>
