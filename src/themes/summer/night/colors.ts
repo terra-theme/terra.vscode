@@ -11,7 +11,7 @@ import {
 
 const basePrimary: BasePrimary = {
     h: 215,
-    s: 20
+    s: 30
 };
 
 export const primaries: TerraPrimaryColors = buildPrimaries(
