@@ -23,14 +23,14 @@ export const palette: TerraPaletteColors = {
     black: primaries[3],
     gray: primaries[4],
 
-    darkRed: hslaToHex({ h: 14, s: 67, l: 40 }),
-    red: hslaToHex({ h: 12, s: 60, l: 60 }),
+    darkRed: hslaToHex({ h: 10, s: 67, l: 50 }),
+    red: hslaToHex({ h: 10, s: 60, l: 60 }),
 
     darkGreen: hslaToHex({ h: 115, s: 40, l: 40 }),
     green: hslaToHex({ h: 115, s: 45, l: 45 }),
 
     darkYellow: hslaToHex({ h: 25, s: 65, l: 55 }),
-    yellow: hslaToHex({ h: 39, s: 65, l: 60 }),
+    yellow: hslaToHex({ h: 35, s: 65, l: 60 }),
 
     darkBlue: hslaToHex({ h: 210, s: 55, l: 40 }),
     blue: hslaToHex({ h: 210, s: 45, l: 50 }),

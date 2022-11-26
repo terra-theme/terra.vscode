@@ -1,19 +1,27 @@
+import {
+    TerraPaletteColors,
+    TerraPrimaryColors,
+    TerraSemanticColors
+} from "./colors";
 import { VscInterfaceColors } from "./interface";
 import { TokenColor } from "./token";
 
-export type ThemeTime = "day" | "night";
+export type TerraThemeTime = "day" | "night";
 
-export type ThemeSeason = "spring" | "summer" | "fall" | "winter";
+export type TerraThemeSeason = "spring" | "summer" | "fall" | "winter";
 
-export type ThemeName = `terra ${ThemeSeason} ${ThemeTime}`;
+export type TerraThemeName = `terra ${TerraThemeSeason} ${TerraThemeTime}`;
 
-export type ThemeType = "dark" | "light";
+export type VscCodeThemeType = "dark" | "light";
 
 export interface Theme {
-    name: ThemeName;
-    time: ThemeTime;
-    season: ThemeSeason;
-    type: ThemeType;
+    name: TerraThemeName;
+    time: TerraThemeTime;
+    season: TerraThemeSeason;
+    type: VscCodeThemeType;
+    primaries: TerraPrimaryColors;
+    palette: TerraPaletteColors;
+    semantics: TerraSemanticColors;
     colors: VscInterfaceColors;
     tokenColors: TokenColor[];
 }

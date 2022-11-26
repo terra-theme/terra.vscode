@@ -2,7 +2,7 @@ import { LuminanceSteps } from "../typings/colors";
 
 export const defaultDayLuminanceMap: LuminanceSteps = [
     // Lows
-    30, 32, 34, 36,
+    20, 25, 30, 35,
     // Mids
     50, 55, 60, 65,
     // Highs
