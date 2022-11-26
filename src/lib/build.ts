@@ -1,12 +1,18 @@
 import { HSL } from "colors-convert/dist/cjs/lib/types/types";
 import * as fs from "fs";
-import { BasePrimary, HexColor } from "../typings/colors";
+import {
+    BasePrimary,
+    HexColor,
+    LuminanceSteps,
+    TerraPrimaryColors
+} from "../typings/colors";
 
 import { TokenScope } from "../typings/scopes";
 import { Theme } from "../typings/theme";
 import { TokenColor, TokenMap } from "../typings/token";
 import { hslaToHex } from "./color";
 import { isFloat } from "./number";
+import { sortObjectByKey } from "./utils";
 
 export const buildPrimary = (basePrimary: BasePrimary, l: HSL["l"]): HexColor => {
     if (isFloat(l)) {
@@ -21,7 +27,22 @@ export const buildPrimary = (basePrimary: BasePrimary, l: HSL["l"]): HexColor =>
     });
 };
 
-// TODO: buildPrimaries(...?)
+export const buildPrimaries = (
+    basePrimary: BasePrimary,
+    luminanceSteps: LuminanceSteps
+): TerraPrimaryColors => {
+    const primaries = luminanceSteps.reduce(
+        (acc: TerraPrimaryColors, luminance: number, index: number) => {
+            return {
+                ...acc,
+                [index]: buildPrimary(basePrimary, luminance)
+            };
+        },
+        {} as TerraPrimaryColors
+    );
+
+    return sortObjectByKey(primaries);
+};
 
 export const buildTokenColors = (
     fullTokenMap: TokenMap<TokenScope>

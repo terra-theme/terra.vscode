@@ -4,6 +4,21 @@ export type HexColor = `#${string}`;
 
 export type BasePrimary = Pick<HSL, "h" | "s">;
 
+export type LuminanceSteps = [
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number
+];
+
 export interface TerraPrimaryColors {
     0: HexColor;
     1: HexColor;
