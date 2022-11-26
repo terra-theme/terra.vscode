@@ -1,6 +1,26 @@
+import { HSL } from "colors-convert/dist/cjs/lib/types/types";
+
 export type HexColor = `#${string}`;
 
+export type BasePrimary = Pick<HSL, "h" | "s">;
+
+export type LuminanceSteps = [
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number
+];
+
 export interface TerraPrimaryColors {
+    [key: string]: HexColor;
     0: HexColor;
     1: HexColor;
     2: HexColor;
@@ -16,6 +36,7 @@ export interface TerraPrimaryColors {
 }
 
 export interface TerraPaletteColors {
+    [key: string]: HexColor;
     black: HexColor;
     gray: HexColor;
     darkRed: HexColor;

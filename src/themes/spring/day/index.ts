@@ -2,7 +2,7 @@ import { buildTokenColors } from "../../../lib/build";
 import { Theme } from "../../../typings/theme";
 import { buildInterfaceColors } from "../../interface";
 
-import { semantics } from "./colors";
+import { primaries, palette, semantics } from "./colors";
 import { fullTokenMap } from "./token";
 
 const theme: Theme = {
@@ -10,6 +10,9 @@ const theme: Theme = {
     type: "light",
     time: "day",
     season: "spring",
+    primaries,
+    palette,
+    semantics,
     colors: buildInterfaceColors(semantics),
     tokenColors: buildTokenColors(fullTokenMap)
 };
