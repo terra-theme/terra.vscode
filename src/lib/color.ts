@@ -16,6 +16,11 @@ const validateAlpha = (alpha: number | undefined): void => {
     }
 };
 
+/**
+ * `color.a` or `alpha` must be a floating point number between 0 or 1, or 0 and 1.
+ * @param color HSLA | HSL
+ * @returns HexColor
+ */
 export const hslaToHex = (color: HSLA | HSL): HexColor => {
     if ("a" in color) {
         validateAlpha(color.a);

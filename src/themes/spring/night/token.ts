@@ -73,7 +73,7 @@ export const defaultTokenMap: TokenMap<DefaultTokenScope> = {
     "variable.other": { foreground: palette.blue },
     "variable.other.object": { foreground: palette.darkYellow },
     "variable.other.property": { foreground: palette.blue },
-    "variable.other.constant": { foreground: palette.blue, fontStyle: "bold" },
+    "variable.other.constant": { foreground: palette.blue },
 
     string: { foreground: palette.white },
     "string.quoted": { foreground: palette.green },

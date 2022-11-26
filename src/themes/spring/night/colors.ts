@@ -1,4 +1,5 @@
-import { buildPrimary } from "../../../lib/build";
+import { defaultNightLuminanceMap } from "../../../constants/luminance";
+import { buildPrimaries } from "../../../lib/build";
 import { hslaToHex, transparentizeHex } from "../../../lib/color";
 import {
     BasePrimary,
@@ -10,25 +11,13 @@ import {
 
 const basePrimary: BasePrimary = {
     h: 150,
-    s: 25
+    s: 20
 };
 
-export const primaries: TerraPrimaryColors = {
-    0: buildPrimary(basePrimary, 10),
-    1: buildPrimary(basePrimary, 12),
-    2: buildPrimary(basePrimary, 14),
-    3: buildPrimary(basePrimary, 21),
-
-    4: buildPrimary(basePrimary, 40),
-    5: buildPrimary(basePrimary, 47),
-    6: buildPrimary(basePrimary, 54),
-    7: buildPrimary(basePrimary, 62),
-
-    8: buildPrimary(basePrimary, 70),
-    9: buildPrimary(basePrimary, 77),
-    10: buildPrimary(basePrimary, 85),
-    11: buildPrimary(basePrimary, 92)
-};
+export const primaries: TerraPrimaryColors = buildPrimaries(
+    basePrimary,
+    defaultNightLuminanceMap
+);
 
 export const palette: TerraPaletteColors = {
     black: primaries[3],
@@ -55,11 +44,11 @@ export const palette: TerraPaletteColors = {
     lightGray: primaries[9],
     white: primaries[11],
 
-    transparent: hslaToHex({ h: 255, s: 100, l: 100 })
+    transparent: hslaToHex({ h: 255, s: 100, l: 100, a: 0 })
 };
 
 export const semantics: TerraSemanticColors = {
-    debug: palette.darkRed,
+    debug: "#FF0000",
 
     shadow: transparentizeHex(primaries[2], 0.3),
 
@@ -78,6 +67,15 @@ export const semantics: TerraSemanticColors = {
 
         selection: transparentizeHex(palette.magenta, 0.15),
         hover: transparentizeHex(palette.lightGray, 0.15)
+    },
+
+    border: {
+        dark: primaries[2],
+        main: primaries[3],
+        light: primaries[4],
+        active: palette.yellow,
+        transparent: palette.transparent,
+        selection: transparentizeHex(palette.yellow, 0.75)
     },
 
     fg: {
@@ -111,15 +109,6 @@ export const semantics: TerraSemanticColors = {
         yellow: palette.yellow,
         gray: palette.lightGray,
         white: palette.white
-    },
-
-    border: {
-        dark: primaries[2],
-        main: primaries[3],
-        light: primaries[4],
-        active: palette.yellow,
-        transparent: palette.transparent,
-        selection: transparentizeHex(palette.yellow, 0.75)
     },
 
     vcs: {
