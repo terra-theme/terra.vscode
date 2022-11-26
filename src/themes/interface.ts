@@ -30,16 +30,16 @@ export const buildInterfaceColors = (
 
         // Sidebar
         "sideBar.background": bg.dark,
-        "sideBar.border": border.dark,
-        "sideBar.dropBackground": bg.light,
-        "sideBar.foreground": fg.main,
+        "sideBar.border": border.main,
+        "sideBar.dropBackground": bg.main,
+        "sideBar.foreground": fg.dark,
         "sideBarSectionHeader.background": bg.main,
         "sideBarSectionHeader.border": border.main,
         "sideBarSectionHeader.foreground": fg.main,
-        "sideBarTitle.foreground": fg.light,
+        "sideBarTitle.foreground": fg.dark,
 
         // Lists
-        "list.activeSelectionBackground": bg.light,
+        "list.activeSelectionBackground": bg.main,
         "list.activeSelectionForeground": fg.active,
         "list.inactiveSelectionBackground": bg.main,
         "list.inactiveSelectionForeground": fg.active,
@@ -68,13 +68,13 @@ export const buildInterfaceColors = (
 
         // Title Bar
         "titleBar.activeBackground": bg.dark,
-        "titleBar.activeForeground": fg.active,
+        "titleBar.activeForeground": fg.main,
         "titleBar.inactiveBackground": bg.dark,
-        "titleBar.inactiveForeground": fg.main,
+        "titleBar.inactiveForeground": fg.light,
         "titleBar.border": border.dark,
 
         // Menu (Quick Fix Menu)
-        "menu.background": bg.dark,
+        "menu.background": bg.main,
         "menu.border": border.main,
         "menu.foreground": fg.main,
         "menu.selectionBackground": bg.light,
@@ -100,7 +100,7 @@ export const buildInterfaceColors = (
         "editorCursor.foreground": fg.active,
 
         "editorLineNumber.activeForeground": fg.active,
-        "editorLineNumber.foreground": fg.dark,
+        "editorLineNumber.foreground": fg.neutral,
 
         "editor.findMatchBackground": bg.selection,
         "editor.findMatchBorder": border.selection,
@@ -163,18 +163,18 @@ export const buildInterfaceColors = (
         "editorGutter.foldingControlForeground": fg.dark,
 
         "editorHoverWidget.background": bg.dark,
-        "editorHoverWidget.border": border.dark,
+        "editorHoverWidget.border": border.main,
         "editorHoverWidget.foreground": fg.main,
 
         "editorIndentGuide.activeBackground": bg.active,
         "editorIndentGuide.background": bg.light,
 
         "editorInlayHint.background": bg.main,
-        "editorInlayHint.foreground": fg.dark,
+        "editorInlayHint.foreground": fg.main,
         "editorInlayHint.typeBackground": bg.main,
-        "editorInlayHint.typeForeground": fg.dark,
+        "editorInlayHint.typeForeground": fg.main,
         "editorInlayHint.parameterBackground": bg.main,
-        "editorInlayHint.parameterForeground": fg.dark,
+        "editorInlayHint.parameterForeground": fg.main,
 
         "editorLink.activeForeground": fg.active,
 
@@ -190,22 +190,24 @@ export const buildInterfaceColors = (
         "editorOverviewRuler.border": border.main,
         "editorRuler.foreground": fg.dark,
 
-        "editorSuggestWidget.background": bg.dark,
-        "editorSuggestWidget.border": border.main,
-        "editorSuggestWidget.foreground": fg.main,
-        "editorSuggestWidget.highlightForeground": fg.active,
-
         "quickInput.background": bg.dark,
         "quickInput.foreground": fg.main,
-        "quickInputList.focusBackground": bg.main,
+        "quickInputList.focusBackground": bg.light,
         "quickInputList.focusForeground": fg.active,
         "quickInputList.focusIconForeground": fg.active,
         "quickInputTitle.background": bg.dark,
 
         // Quick Find Window
-        "editorWidget.background": bg.dark,
+        "editorWidget.background": bg.main,
         "editorWidget.foreground": fg.main,
+        "editorWidget.border": border.main,
         "editorWidget.resizeBorder": border.active,
+
+        "editorSuggestWidget.background": bg.main,
+        "editorSuggestWidget.border": border.main,
+        "editorSuggestWidget.foreground": fg.main,
+        "editorSuggestWidget.highlightForeground": fg.active,
+        "editorSuggestWidget.selectedBackground": bg.selection,
 
         // Git & Diff
         "diffEditor.border": border.main,
@@ -330,23 +332,23 @@ export const buildInterfaceColors = (
         "settings.headerForeground": fg.dark,
         "settings.focusedRowBackground": bg.dark,
 
-        // Checkbox (Settings)
+        // Checkbox
         "checkbox.background": bg.dark,
         "checkbox.border": border.main,
         "checkbox.foreground": fg.main,
 
-        // Dropdown (Settings)
+        // Dropdown
         "dropdown.background": bg.dark,
         "dropdown.border": border.main,
         "dropdown.foreground": fg.main,
 
-        // Input (Settings)
+        // Input
         "input.background": bg.dark,
         "input.border": border.main,
         "input.foreground": fg.main,
         "input.placeholderForeground": fg.inactive,
 
-        // Input Options (Settings)
+        // Input Options
         "inputOption.activeBackground": bg.light,
         "inputOption.activeBorder": border.active,
         "inputOption.activeForeground": fg.active,
