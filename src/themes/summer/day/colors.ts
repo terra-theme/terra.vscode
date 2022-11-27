@@ -83,8 +83,9 @@ export const semantics: TerraSemanticColors = {
         main: primaries[2],
         light: primaries[3],
 
-        invert: palette.white,
-        neutral: palette.gray,
+        invert: primaries[9],
+        neutral: primaries[5],
+
         warning: palette.yellow,
         error: palette.red,
         info: palette.blue,
