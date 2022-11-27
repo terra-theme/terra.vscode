@@ -14,7 +14,7 @@ When I am finished with the VSCode variant for the theme, I will continue to wor
 
 ## Themes
 
-- [x] Spring
-- [x] Summer
-- [ ] Fall
-- [ ] Winter
+-   [x] Spring
+-   [x] Summer
+-   [x] Fall
+-   [ ] Winter
