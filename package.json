@@ -64,6 +64,16 @@
                 "label": "Terra - Fall [Day]",
                 "uiTheme": "vs",
                 "path": "./dist/terra-fall-day.json"
+            },
+            {
+                "label": "Terra - Winter [Night]",
+                "uiTheme": "vs-dark",
+                "path": "./dist/terra-winter-night.json"
+            },
+            {
+                "label": "Terra - Winter [Day]",
+                "uiTheme": "vs",
+                "path": "./dist/terra-winter-day.json"
             }
         ]
     },

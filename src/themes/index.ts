@@ -9,3 +9,7 @@ export { default as summerDay } from "./summer/day";
 // Fall
 export { default as fallNight } from "./fall/night";
 export { default as fallDay } from "./fall/day";
+
+// Winter
+export { default as winterNight } from "./winter/night";
+export { default as winterDay } from "./winter/day";

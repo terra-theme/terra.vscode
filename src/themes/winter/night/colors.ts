@@ -1,4 +1,4 @@
-import { defaultDayLuminanceMap } from "../../../constants/luminance";
+import { defaultNightLuminanceMap } from "../../../constants/luminance";
 import { buildPrimaries } from "../../../lib/build";
 import { hslaToHex, transparentizeHex } from "../../../lib/color";
 import {
@@ -10,36 +10,36 @@ import {
 } from "../../../typings/colors";
 
 const basePrimary: BasePrimary = {
-    h: 215,
-    s: 20
+    h: 200,
+    s: 10
 };
 
 export const primaries: TerraPrimaryColors = buildPrimaries(
     basePrimary,
-    defaultDayLuminanceMap
+    defaultNightLuminanceMap
 );
 
 export const palette: TerraPaletteColors = {
     black: primaries[3],
     gray: primaries[4],
 
-    darkRed: hslaToHex({ h: 10, s: 67, l: 50 }),
-    red: hslaToHex({ h: 10, s: 60, l: 60 }),
+    darkRed: hslaToHex({ h: 15, s: 65, l: 50 }),
+    red: hslaToHex({ h: 15, s: 65, l: 57 }),
 
-    darkGreen: hslaToHex({ h: 115, s: 40, l: 40 }),
-    green: hslaToHex({ h: 115, s: 45, l: 45 }),
+    darkGreen: hslaToHex({ h: 115, s: 25, l: 45 }),
+    green: hslaToHex({ h: 115, s: 40, l: 65 }),
 
-    darkYellow: hslaToHex({ h: 25, s: 65, l: 55 }),
-    yellow: hslaToHex({ h: 35, s: 65, l: 60 }),
+    darkYellow: hslaToHex({ h: 28, s: 90, l: 65 }),
+    yellow: hslaToHex({ h: 42, s: 75, l: 65 }),
 
-    darkBlue: hslaToHex({ h: 210, s: 55, l: 40 }),
-    blue: hslaToHex({ h: 210, s: 45, l: 50 }),
+    darkBlue: hslaToHex({ h: 210, s: 55, l: 60 }),
+    blue: hslaToHex({ h: 210, s: 55, l: 65 }),
 
-    darkMagenta: hslaToHex({ h: 265, s: 30, l: 55 }),
-    magenta: hslaToHex({ h: 265, s: 45, l: 65 }),
+    darkMagenta: hslaToHex({ h: 304, s: 25, l: 60 }),
+    magenta: hslaToHex({ h: 269, s: 35, l: 75 }),
 
-    darkCyan: hslaToHex({ h: 145, s: 49, l: 40 }),
-    cyan: hslaToHex({ h: 137, s: 35, l: 50 }),
+    darkCyan: hslaToHex({ h: 155, s: 40, l: 51 }),
+    cyan: hslaToHex({ h: 145, s: 40, l: 60 }),
 
     lightGray: primaries[9],
     white: primaries[11],
@@ -48,42 +48,42 @@ export const palette: TerraPaletteColors = {
 };
 
 export const semantics: TerraSemanticColors = {
-    debug: "#FF0000",
+    debug: palette.darkRed,
 
-    shadow: transparentizeHex(primaries[0], 0.1),
+    shadow: transparentizeHex(primaries[2], 0.3),
 
     bg: {
-        dark: primaries[9],
-        main: primaries[10],
-        light: primaries[11],
+        dark: primaries[0],
+        main: primaries[1],
+        light: primaries[2],
 
-        active: palette.darkYellow,
-        neutral: primaries[11],
+        active: palette.blue,
+        neutral: palette.black,
         transparent: palette.transparent,
 
         info: transparentizeHex(palette.darkBlue, 0.25),
         warning: transparentizeHex(palette.darkYellow, 0.25),
-        error: transparentizeHex(palette.darkRed, 0.25),
+        error: palette.transparent,
 
-        selection: transparentizeHex(palette.darkYellow, 0.15),
-        hover: transparentizeHex(palette.lightGray, 0.15)
+        selection: transparentizeHex(palette.blue, 0.1),
+        hover: transparentizeHex(palette.lightGray, 0.1)
     },
 
     border: {
-        dark: primaries[7],
-        main: primaries[8],
-        light: primaries[9],
-        active: palette.darkYellow,
+        dark: primaries[2],
+        main: primaries[3],
+        light: primaries[4],
+        active: palette.blue,
         transparent: palette.transparent,
-        selection: transparentizeHex(palette.magenta, 0.75)
+        selection: transparentizeHex(palette.blue, 0.75)
     },
 
     fg: {
-        dark: primaries[1],
-        main: primaries[2],
-        light: primaries[3],
+        dark: primaries[9],
+        main: primaries[10],
+        light: primaries[11],
 
-        invert: primaries[9],
+        invert: primaries[1],
         neutral: primaries[5],
 
         warning: palette.yellow,
@@ -91,7 +91,7 @@ export const semantics: TerraSemanticColors = {
         info: palette.blue,
         success: palette.green,
 
-        active: palette.darkYellow,
+        active: palette.blue,
         inactive: palette.gray
     },
 

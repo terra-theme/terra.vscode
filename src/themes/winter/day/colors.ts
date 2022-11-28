@@ -10,7 +10,7 @@ import {
 } from "../../../typings/colors";
 
 const basePrimary: BasePrimary = {
-    h: 215,
+    h: 200,
     s: 20
 };
 
@@ -30,7 +30,7 @@ export const palette: TerraPaletteColors = {
     green: hslaToHex({ h: 115, s: 45, l: 45 }),
 
     darkYellow: hslaToHex({ h: 25, s: 65, l: 55 }),
-    yellow: hslaToHex({ h: 35, s: 65, l: 60 }),
+    yellow: hslaToHex({ h: 35, s: 70, l: 60 }),
 
     darkBlue: hslaToHex({ h: 210, s: 55, l: 40 }),
     blue: hslaToHex({ h: 210, s: 45, l: 50 }),
@@ -57,7 +57,7 @@ export const semantics: TerraSemanticColors = {
         main: primaries[10],
         light: primaries[11],
 
-        active: palette.darkYellow,
+        active: palette.darkBlue,
         neutral: primaries[11],
         transparent: palette.transparent,
 
@@ -65,7 +65,7 @@ export const semantics: TerraSemanticColors = {
         warning: transparentizeHex(palette.darkYellow, 0.25),
         error: transparentizeHex(palette.darkRed, 0.25),
 
-        selection: transparentizeHex(palette.darkYellow, 0.15),
+        selection: transparentizeHex(palette.darkBlue, 0.1),
         hover: transparentizeHex(palette.lightGray, 0.15)
     },
 
@@ -73,7 +73,7 @@ export const semantics: TerraSemanticColors = {
         dark: primaries[7],
         main: primaries[8],
         light: primaries[9],
-        active: palette.darkYellow,
+        active: palette.darkBlue,
         transparent: palette.transparent,
         selection: transparentizeHex(palette.magenta, 0.75)
     },
@@ -91,7 +91,7 @@ export const semantics: TerraSemanticColors = {
         info: palette.blue,
         success: palette.green,
 
-        active: palette.darkYellow,
+        active: palette.darkBlue,
         inactive: palette.gray
     },
 
