@@ -56,6 +56,11 @@
                 "path": "./dist/terra-summer-night.json"
             },
             {
+                "label": "Terra - Summer [Dark Night]",
+                "uiTheme": "vs-dark",
+                "path": "./dist/terra-summer-dark_night.json"
+            },
+            {
                 "label": "Terra - Summer [Day]",
                 "uiTheme": "vs",
                 "path": "./dist/terra-summer-day.json"

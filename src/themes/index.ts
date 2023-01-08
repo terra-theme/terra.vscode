@@ -5,6 +5,7 @@ export { default as springDay } from "./spring/day";
 
 // Summer
 export { default as summerNight } from "./summer/night";
+export { default as summerDarkNight } from "./summer/dark_night";
 export { default as summerDay } from "./summer/day";
 
 // Fall
