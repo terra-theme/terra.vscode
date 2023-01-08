@@ -6,7 +6,7 @@ import {
 import { VscInterfaceColors } from "./interface";
 import { TokenColor } from "./token";
 
-export type TerraThemeTime = "day" | "night";
+export type TerraThemeTime = "day" | "night" | "dark_night";
 
 export type TerraThemeSeason = "spring" | "summer" | "fall" | "winter";
 

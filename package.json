@@ -41,6 +41,11 @@
                 "path": "./dist/terra-spring-night.json"
             },
             {
+                "label": "Terra - Spring [Dark Night]",
+                "uiTheme": "vs-dark",
+                "path": "./dist/terra-spring-dark_night.json"
+            },
+            {
                 "label": "Terra - Spring [Day]",
                 "uiTheme": "vs",
                 "path": "./dist/terra-spring-day.json"

@@ -17,3 +17,12 @@ export const defaultNightLuminanceMap: LuminanceSteps = [
     // Highs
     70, 75, 85, 90
 ];
+
+export const darkNightLuminanceMap: LuminanceSteps = [
+    // Lows
+    6, 8, 10, 12,
+    // Mids
+    35, 45, 55, 65,
+    // Highs
+    70, 75, 85, 90
+];
