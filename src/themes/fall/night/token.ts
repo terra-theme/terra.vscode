@@ -100,8 +100,8 @@ export const defaultTokenMap: TokenMap<DefaultTokenScope> = {
     "support.type.primitive": { foreground: palette.darkCyan },
     "support.other": { foreground: palette.white },
 
-    punctuation: { foreground: palette.white },
-    "punctuation.definition": { foreground: palette.white },
+    punctuation: { foreground: palette.lightGray },
+    "punctuation.definition": { foreground: palette.lightGray },
     "punctuation.definition.tag": { foreground: palette.darkYellow },
     "punctuation.definition.comment": { foreground: palette.gray },
     "punctuation.definition.string": { foreground: palette.green },
@@ -111,8 +111,8 @@ export const defaultTokenMap: TokenMap<DefaultTokenScope> = {
     "meta.object": { foreground: palette.darkYellow },
     "meta.object.member": { foreground: palette.blue },
     "meta.object-literal.key": { foreground: palette.blue },
-    "meta.brace.round": { foreground: palette.white },
-    "meta.brace.square": { foreground: palette.white },
+    "meta.brace.round": { foreground: palette.lightGray },
+    "meta.brace.square": { foreground: palette.lightGray },
 
     source: { foreground: palette.lightGray },
 
