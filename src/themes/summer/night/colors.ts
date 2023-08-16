@@ -1,4 +1,3 @@
-import { defaultNightLuminanceMap } from "../../../constants/luminance";
 import { buildPrimaries } from "../../../lib/build";
 import { hslaToHex, transparentizeHex } from "../../../lib/color";
 import {
@@ -11,32 +10,39 @@ import {
 
 const basePrimary: BasePrimary = {
     h: 215,
-    s: 30
+    s: 25
 };
 
 export const primaries: TerraPrimaryColors = buildPrimaries(
     basePrimary,
-    defaultNightLuminanceMap
+    [
+        // Lows
+        9, 10, 12, 14,
+        // Mids
+        35, 45, 55, 65,
+        // Highs
+        70, 75, 85, 90
+    ]
 );
 
 export const palette: TerraPaletteColors = {
-    black: primaries[3],
-    gray: primaries[4],
+    black: primaries[4],
+    gray: primaries[6],
 
     darkRed: hslaToHex({ h: 15, s: 67, l: 50 }),
-    red: hslaToHex({ h: 15, s: 65, l: 57 }),
+    red: hslaToHex({ h: 15, s: 65, l: 55 }),
 
     darkGreen: hslaToHex({ h: 115, s: 25, l: 45 }),
     green: hslaToHex({ h: 115, s: 38, l: 63 }),
 
-    darkYellow: hslaToHex({ h: 28, s: 94, l: 63 }),
-    yellow: hslaToHex({ h: 42, s: 86, l: 62 }),
+    darkYellow: hslaToHex({ h: 25, s: 75, l: 63 }),
+    yellow: hslaToHex({ h: 40, s: 75, l: 60 }),
 
     darkBlue: hslaToHex({ h: 210, s: 54, l: 60 }),
     blue: hslaToHex({ h: 210, s: 46, l: 64 }),
 
     darkMagenta: hslaToHex({ h: 304, s: 25, l: 58 }),
-    magenta: hslaToHex({ h: 269, s: 35, l: 75 }),
+    magenta: hslaToHex({ h: 269, s: 30, l: 75 }),
 
     darkCyan: hslaToHex({ h: 155, s: 35, l: 51 }),
     cyan: hslaToHex({ h: 145, s: 35, l: 60 }),
